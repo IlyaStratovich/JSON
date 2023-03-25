@@ -9,25 +9,8 @@ import UIKit
 
 enum UserTap: String, CaseIterable {
     case showClown = "Show Clown 🤡"
-    case clownJson = "Open Clown JSON"
+    case someJson = "Open Some JSON"
     case coursesList = "Open Courses List"
-}
-
-enum Link: String, CaseIterable {
-    case ImageURL
-    case clownJson
-    case coursesList
-    
-    var url: URL {
-        switch self {
-        case .ImageURL:
-            return URL(string: "https://st2.depositphotos.com/1194063/6280/i/600/depositphotos_62801209-stock-photo-clown.jpg")!
-        case .clownJson:
-            return URL(string: "https://api.sunrisesunset.io/json?lat=38.907192&lng=-77.036873&timezone=UTC&date=today")!
-        case .coursesList:
-            return URL(string: "https://swiftbook.ru//wp-content/uploads/api/api_courses")!
-        }
-    }
 }
 
 enum Alert {
@@ -55,6 +38,11 @@ enum Alert {
     }
 
 final class MainViewController: UIViewController, UICollectionViewDataSource {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    private let userTaps = UserTap.allCases
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         UserTap.allCases.count
     }
@@ -71,16 +59,14 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
         switch userTap {
         case .showClown:
             performSegue(withIdentifier: "showClown", sender: nil)
-        case .clownJson:
-            fetchClown()
+        case .someJson:
+            fetchSomeJson()
         case .coursesList:
             performSegue(withIdentifier: "coursesList", sender: nil)
         }
     }
-
-    private let userTaps = UserTap.allCases
     
-    @IBOutlet weak var collectionView: UICollectionView!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,8 +82,7 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
-    
-    private func showAlert(withStatus status: Alert) {
+     func showAlert(withStatus status: Alert) {
         let alert = UIAlertController(
             title: status.title,
             message: status.message,
@@ -112,6 +97,7 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
     }
     
 }
+
     extension MainViewController: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView,
                             layout collectionViewLayout: UICollectionViewLayout,
@@ -121,26 +107,25 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
-    extension MainViewController {
-        private func fetchClown() {
-//            guard let url = Link.clownJson.url else { return }
-            URLSession.shared.dataTask(with: Link.clownJson.url) { data, _, error in
-                guard let data else {
-                    print(error?.localizedDescription ?? "No error description")
-                    return
-                }
-                
-                let decoder = JSONDecoder()
-                
-                do {
-                    let course = try decoder.decode(FirstCourse.self, from: data)
-                    print(course)
-                    self.showAlert(withStatus: .success)
-                } catch let error {
-                    print(error.localizedDescription)
-                    self.showAlert(withStatus: .failed)
-                }
-            }.resume()
-        }
-    }
+//    extension MainViewController {
+//        private func fetchClown() {
+//            URLSession.shared.dataTask(with: Link.someJson.url) { data, _, error in
+//                guard let data else {
+//                    print(error?.localizedDescription ?? "No error description")
+//                    return
+//                }
+//                
+//                let decoder = JSONDecoder()
+//                
+//                do {
+//                    let course = try decoder.decode(FirstCourse.self, from: data)
+//                    print(course)
+//                    self.showAlert(withStatus: .success)
+//                } catch let error {
+//                    print(error.localizedDescription)
+//                    self.showAlert(withStatus: .failed)
+//                }
+//            }.resume()
+//        }
+//    }
 

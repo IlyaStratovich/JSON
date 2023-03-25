@@ -20,8 +20,6 @@ struct SwiftbookInfo: Decodable {
     let websiteName: String?
 }
 
-
-
 struct FirstCourse: Decodable {
     let results: SecondCourse
     let status: String

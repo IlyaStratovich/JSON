@@ -70,7 +70,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="What kind of clown are you today?" id="OE8-If-EZb"/>
                     <connections>
-                        <outlet property="collectionView" destination="tAD-dj-Z0j" id="zbh-GD-7ly"/>
+                        <outlet property="collectionView" destination="tAD-dj-Z0j" id="T6D-x3-yhC"/>
                         <segue destination="bsY-Ah-WV2" kind="show" identifier="showClown" id="LzM-eb-uBq"/>
                         <segue destination="RtI-Mv-uzX" kind="show" identifier="coursesList" id="Sar-vP-tLv"/>
                     </connections>

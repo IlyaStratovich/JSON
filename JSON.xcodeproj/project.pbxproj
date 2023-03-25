@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1656C96129CE05D000F92566 /* CoursesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656C96029CE05D000F92566 /* CoursesListViewController.swift */; };
 		1665A43A29CF7F3B0023EF29 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1665A43929CF7F3B0023EF29 /* CourseCell.swift */; };
+		1665A43D29CF91DE0023EF29 /* Network Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1665A43C29CF91DE0023EF29 /* Network Manager.swift */; };
 		168C63A629CBA48E005936A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C63A529CBA48E005936A6 /* MainViewController.swift */; };
 		168C63A829CBA9A8005936A6 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C63A729CBA9A8005936A6 /* Course.swift */; };
 		169275E829CB31EA0057EB2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169275E729CB31EA0057EB2B /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1656C96029CE05D000F92566 /* CoursesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewController.swift; sourceTree = "<group>"; };
 		1665A43929CF7F3B0023EF29 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		1665A43C29CF91DE0023EF29 /* Network Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network Manager.swift"; sourceTree = "<group>"; };
 		168C63A529CBA48E005936A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		168C63A729CBA9A8005936A6 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		169275E429CB31EA0057EB2B /* JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 		16B701FF29CC8D380008F819 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1665A43C29CF91DE0023EF29 /* Network Manager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				168C63A629CBA48E005936A6 /* MainViewController.swift in Sources */,
 				16B7020129CCA41D0008F819 /* ImageViewController.swift in Sources */,
 				169275EA29CB31EA0057EB2B /* SceneDelegate.swift in Sources */,
+				1665A43D29CF91DE0023EF29 /* Network Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
