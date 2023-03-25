@@ -7,25 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1656C96129CE05D000F92566 /* CoursesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1656C96029CE05D000F92566 /* CoursesListViewController.swift */; };
+		1665A43A29CF7F3B0023EF29 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1665A43929CF7F3B0023EF29 /* CourseCell.swift */; };
+		168C63A629CBA48E005936A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C63A529CBA48E005936A6 /* MainViewController.swift */; };
+		168C63A829CBA9A8005936A6 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168C63A729CBA9A8005936A6 /* Course.swift */; };
 		169275E829CB31EA0057EB2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169275E729CB31EA0057EB2B /* AppDelegate.swift */; };
 		169275EA29CB31EA0057EB2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169275E929CB31EA0057EB2B /* SceneDelegate.swift */; };
-		169275EC29CB31EA0057EB2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169275EB29CB31EA0057EB2B /* ViewController.swift */; };
 		169275EF29CB31EA0057EB2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169275ED29CB31EA0057EB2B /* Main.storyboard */; };
 		169275F129CB31EB0057EB2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169275F029CB31EB0057EB2B /* Assets.xcassets */; };
 		169275F429CB31EB0057EB2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169275F229CB31EB0057EB2B /* LaunchScreen.storyboard */; };
 		1692760329CB38660057EB2B /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1692760229CB38660057EB2B /* UserAction.swift */; };
+		16B7020129CCA41D0008F819 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B7020029CCA41D0008F819 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1656C96029CE05D000F92566 /* CoursesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesListViewController.swift; sourceTree = "<group>"; };
+		1665A43929CF7F3B0023EF29 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		168C63A529CBA48E005936A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		168C63A729CBA9A8005936A6 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		169275E429CB31EA0057EB2B /* JSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169275E729CB31EA0057EB2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		169275E929CB31EA0057EB2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		169275EB29CB31EA0057EB2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		169275EE29CB31EA0057EB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		169275F029CB31EB0057EB2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		169275F329CB31EB0057EB2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		169275F529CB31EB0057EB2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1692760229CB38660057EB2B /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
+		16B7020029CCA41D0008F819 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		169275E629CB31EA0057EB2B /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				16B701FF29CC8D380008F819 /* Services */,
 				1692760129CB382A0057EB2B /* Views */,
 				169275FE29CB324A0057EB2B /* Models */,
 				169275FD29CB32030057EB2B /* ViewControllers */,
@@ -90,8 +99,9 @@
 		169275FD29CB32030057EB2B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				169275EB29CB31EA0057EB2B /* ViewController.swift */,
-				1692760229CB38660057EB2B /* UserAction.swift */,
+				168C63A529CBA48E005936A6 /* MainViewController.swift */,
+				1656C96029CE05D000F92566 /* CoursesListViewController.swift */,
+				16B7020029CCA41D0008F819 /* ImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +109,7 @@
 		169275FE29CB324A0057EB2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				168C63A729CBA9A8005936A6 /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,8 +117,17 @@
 		1692760129CB382A0057EB2B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1665A43929CF7F3B0023EF29 /* CourseCell.swift */,
+				1692760229CB38660057EB2B /* UserAction.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		16B701FF29CC8D380008F819 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168C63A829CBA9A8005936A6 /* Course.swift in Sources */,
 				1692760329CB38660057EB2B /* UserAction.swift in Sources */,
-				169275EC29CB31EA0057EB2B /* ViewController.swift in Sources */,
 				169275E829CB31EA0057EB2B /* AppDelegate.swift in Sources */,
+				1656C96129CE05D000F92566 /* CoursesListViewController.swift in Sources */,
+				1665A43A29CF7F3B0023EF29 /* CourseCell.swift in Sources */,
+				168C63A629CBA48E005936A6 /* MainViewController.swift in Sources */,
+				16B7020129CCA41D0008F819 /* ImageViewController.swift in Sources */,
 				169275EA29CB31EA0057EB2B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
