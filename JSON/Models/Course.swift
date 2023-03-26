@@ -8,7 +8,9 @@ import Foundation
 
 
 struct Course: Codable {
+    let id: Int?
     let name: String?
+    let link: String?
     let imageUrl: URL?
     let numberOfLessons: Int?
     let numberOfTests: Int?

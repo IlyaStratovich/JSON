@@ -57,16 +57,12 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userTap = userTaps[indexPath.item]
         switch userTap {
-        case .showClown:
-            performSegue(withIdentifier: "showClown", sender: nil)
+        case .showClown: performSegue(withIdentifier: "showClown", sender: nil)
         case .someJson:
             fetchSomeJson()
-        case .coursesList:
-            performSegue(withIdentifier: "coursesList", sender: nil)
+        case .coursesList: performSegue(withIdentifier: "coursesList", sender: nil)
         }
     }
-    
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,8 +73,8 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "coursesList" {
-            guard let coursesListVC = segue.destination as? CoursesListViewController else {return}
-            coursesListVC.fetchCoursesList()
+            guard let coursesListVC = segue.destination as? CoursesListViewController else { return }
+            coursesListVC.fetchCourses()
         }
     }
     
@@ -107,25 +103,4 @@ final class MainViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
-//    extension MainViewController {
-//        private func fetchClown() {
-//            URLSession.shared.dataTask(with: Link.someJson.url) { data, _, error in
-//                guard let data else {
-//                    print(error?.localizedDescription ?? "No error description")
-//                    return
-//                }
-//                
-//                let decoder = JSONDecoder()
-//                
-//                do {
-//                    let course = try decoder.decode(FirstCourse.self, from: data)
-//                    print(course)
-//                    self.showAlert(withStatus: .success)
-//                } catch let error {
-//                    print(error.localizedDescription)
-//                    self.showAlert(withStatus: .failed)
-//                }
-//            }.resume()
-//        }
-//    }
 

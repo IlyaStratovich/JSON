@@ -13,6 +13,7 @@ final class CoursesListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 100
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,16 +31,17 @@ final class CoursesListViewController: UITableViewController {
 }
 
 extension CoursesListViewController {
-    func fetchCoursesList() {
+    func fetchCourses() {
         URLSession.shared.dataTask(with: Link.coursesList.url) { [weak self] data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-
+            
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
                 self?.courses = try decoder.decode([Course].self, from: data)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
